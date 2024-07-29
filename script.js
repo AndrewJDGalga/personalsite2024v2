@@ -3,3 +3,4 @@ function revealFollowing(e) { e.target.nextElementSibling.classList.toggle('hidd
 for(let i = 0; i < btnsSkills.length; i++) btnsSkills[i].onclick = revealFollowing;
 
 const projectsHook = document.getElementById('projects_hook');
+const projectsCSVName = 'projects.csv';
