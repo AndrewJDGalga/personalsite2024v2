@@ -1,0 +1,1 @@
+const projectsHook = document.getElementById('projects_hook');
