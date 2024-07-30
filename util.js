@@ -1,4 +1,4 @@
-export async function getCSVContent(filename) {
+export async function getCSVAsString(filename) {
     let content = '';
     try {
         const res = await fetch(filename, {
@@ -15,4 +15,10 @@ export async function getCSVContent(filename) {
         console.log(e.message);
     }
     return content;
+}
+
+export function convertStringToArray(content) {
+    const rows = content.split('\r\n');
+    const noEmpty = rows.filter(line=> line !== "");
+    return noEmpty.map(row=> row.split(','));
 }
