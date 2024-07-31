@@ -11,6 +11,14 @@ const contentString = await getCSVAsString(projectsCSVName);
 const portfolioObject = (header, contentArray) => {
     console.log(header);
     console.log(contentArray);
+
+    const container = document.createElement('article');
+    const title = document.createElement('h2');
+    title.textContent = header;
+
+    container.append(title);
+
+    return container;
 }
 
 if(contentString !== ''){
@@ -18,5 +26,6 @@ if(contentString !== ''){
     const contentsArray = convertStringToArray(contentString);
     const bodyArray = contentsArray.slice(1);
     const contentFrag = document.createDocumentFragment();
+
     contentsArray[0].forEach((header, index) => { contentFrag.append(portfolioObject(header, bodyArray[index])); });
 }
