@@ -8,6 +8,15 @@ const projectsCSVName = 'projects.csv';
 
 const contentString = await getCSVAsString(projectsCSVName);
 
+const portfolioObject = (header, contentArray) => {
+    console.log(header);
+    console.log(contentArray);
+}
+
 if(contentString !== ''){
-    console.log(convertStringToArray(contentString));
+    //console.log(convertStringToArray(contentString));
+    const contentsArray = convertStringToArray(contentString);
+    const bodyArray = contentsArray.slice(1);
+    const contentFrag = document.createDocumentFragment();
+    contentsArray[0].forEach((header, index) => { contentFrag.append(portfolioObject(header, bodyArray[index])); });
 }
