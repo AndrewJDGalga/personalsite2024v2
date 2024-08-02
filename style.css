@@ -13,14 +13,25 @@ body {
     text-shadow: black 0.5px 0.5px 0.5px;
 }
 
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 32px 0;
+}
+
+/*
 header h1 {
     float: right;
 }
+    */
 
 h1 {
     word-break: keep-all;
     width: 20rem;
     text-align: center;
+    margin: 0;
 }
 
 main {
@@ -57,3 +68,10 @@ ul.container {
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+div img {
+    display: inline;
+    width: 64px;
+    margin: 0 8px;
+}
+
