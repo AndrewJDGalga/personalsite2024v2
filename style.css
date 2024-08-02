@@ -16,10 +16,18 @@ ul h3 {
     display: inline-block;
 }
 
+
 li ul li {
-    margin: 2rem 0 2rem 1rem;
+    margin-left: 1rem;
 }
 
+ul.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/*
 .icon::after {
     display: inline-block;
     aspect-ratio: 4/3;
@@ -47,3 +55,4 @@ li ul li {
     content: url('astro-icon-dark.svg');
     height: 2rem;
 }
+*/
