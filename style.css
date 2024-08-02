@@ -7,13 +7,24 @@
 }
 
 body {
-    margin: 0;
+    margin: 1rem;
+    background-color: slateblue;
+    color:seashell;
+    text-shadow: black 0.5px 0.5px 0.5px;
+}
+
+header h1 {
+    float: right;
 }
 
 h1 {
     word-break: keep-all;
     width: 20rem;
     text-align: center;
+}
+
+main {
+    clear: both;
 }
 
 ul {
@@ -29,6 +40,16 @@ ul h3 {
 
 li ul li {
     margin-left: 1rem;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
 
 ul.container {
