@@ -8,7 +8,7 @@ const projectsCSVName = 'projects.csv';
 
 const contentString = await getCSVAsString(projectsCSVName);
 
-const portfolioObject = (contentArray) => {
+function portfolioObject(contentArray) {
     console.log(contentArray);
 
     const container = document.createElement('article');
@@ -32,13 +32,12 @@ const portfolioObject = (contentArray) => {
 }
 
 if(contentString !== ''){
-    console.log(convertStringToArray(contentString));
     const contentsArray = convertStringToArray(contentString);
-    const bodyArray = contentsArray.slice(1);
-    const contentFrag = document.createDocumentFragment();
+    //const bodyArray = contentsArray.slice(1);
+    //const contentFrag = document.createDocumentFragment();
 
     //contentsArray[0].forEach((header, index) => { contentFrag.append(portfolioObject(header, bodyArray[index])); });
-    for(let i = 0; i < contentsArray[0].length; i++) { contentFrag.append(portfolioObject(bodyArray[i])); }
+    //for(let i = 0; i < contentsArray[0].length; i++) { contentFrag.append(portfolioObject(bodyArray[i])); }
 
-    projectsHook.appendChild(contentFrag);
+    //projectsHook.appendChild(contentFrag);
 }

@@ -19,6 +19,15 @@ export async function getCSVAsString(filename) {
 
 export function convertStringToArray(content) {
     const rows = content.split('\r\n');
-    const noEmpty = rows.filter(line=> line !== "");
-    return noEmpty.map(row=> row.split(','));
+
+    const quotecheck = new RegExp(/"/); //
+
+    const noEmpty = rows.forEach(line=>{
+        if(quotecheck.test(line)) {
+            const quoteSection = new RegExp(/"(.*?)"/g);
+            console.log(line.match(quoteSection));
+        }
+    })
+
+    return '';
 }
