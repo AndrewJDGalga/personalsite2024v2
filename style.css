@@ -1,3 +1,30 @@
 .hidden {
     display: none;
 }
+
+.margin-center {
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul h3 {
+    margin: 0;
+    display: inline-block;
+}
+
+li ul li {
+    margin-left: 1rem;
+}
+
+li ul li::before {
+    display: inline-block;
+    content: "+";
+    /*background-color: black;*/
+    width: 1em;
+    height: 0.1rem;
+    /*vertical-align: super;*/
+}
