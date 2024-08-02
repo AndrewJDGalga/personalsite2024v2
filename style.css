@@ -17,24 +17,33 @@ ul h3 {
 }
 
 li ul li {
-    margin-left: 1rem;
+    margin: 2rem 0 2rem 1rem;
 }
 
-/*
-li ul li::before {
+.icon::after {
     display: inline-block;
-    content: "+";*/
-    /*background-color: black;*/
-    /*width: 0.5rem;
-    height: 0.1rem;*/
-    /*vertical-align: super;*/
-/*}*/
-
-.reactjs::before {
-    display: inline-block;
-    content: url('react_icon.svg');
-    width: 1.5rem;
-    height: 1.5rem;
+    aspect-ratio: 4/3;
+    height: 2.5rem;
     text-align: center;
     vertical-align: middle;
+    padding-left: 16px;
+}
+
+.astrojs {
+    margin: 0 0 2rem 1rem;
+}
+.jquery {
+    margin: 2rem 0 0 1rem;
+}
+.reactjs::after {
+    content: url('react_logo.svg');
+}
+.jquery::after {
+    content: url('jquery_logo.svg');
+    height: 3rem;
+    vertical-align: sub;
+}
+.astrojs::after {
+    content: url('astro-icon-dark.svg');
+    height: 2rem;
 }
