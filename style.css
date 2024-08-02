@@ -6,6 +6,16 @@
     margin: 0 auto;
 }
 
+body {
+    margin: 0;
+}
+
+h1 {
+    word-break: keep-all;
+    width: 20rem;
+    text-align: center;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -26,33 +36,3 @@ ul.container {
     flex-direction: row;
     justify-content: space-evenly;
 }
-
-/*
-.icon::after {
-    display: inline-block;
-    aspect-ratio: 4/3;
-    height: 2.5rem;
-    text-align: center;
-    vertical-align: middle;
-    padding-left: 16px;
-}
-
-.astrojs {
-    margin: 0 0 2rem 1rem;
-}
-.jquery {
-    margin: 2rem 0 0 1rem;
-}
-.reactjs::after {
-    content: url('react_logo.svg');
-}
-.jquery::after {
-    content: url('jquery_logo.svg');
-    height: 3rem;
-    vertical-align: sub;
-}
-.astrojs::after {
-    content: url('astro-icon-dark.svg');
-    height: 2rem;
-}
-*/
