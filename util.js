@@ -18,16 +18,23 @@ export async function getCSVAsString(filename) {
 }
 
 export function convertStringToArray(content) {
+    const stringArray = [];
     const rows = content.split('\r\n');
-
-    const quotecheck = new RegExp(/"/); //
+    const quotecheck = new RegExp(/"/);
 
     const noEmpty = rows.forEach(line=>{
+        let quote = "";
         if(quotecheck.test(line)) {
-            const quoteSection = new RegExp(/"(.*?)"/g);
-            console.log(line.match(quoteSection));
+            const quoteSection = new RegExp(/"(.*?)"/);
+            quote = quoteSection.exec(line);
+            line = line.substring(0, quote.index-1);
         }
+        const arr = line.split(",");
+        (quote !== "") && arr.push(quote[1]);
+        stringArray.push(arr);
     })
 
-    return '';
+    console.log(stringArray);
+
+    return stringArray;
 }
