@@ -20,11 +20,21 @@ li ul li {
     margin-left: 1rem;
 }
 
+/*
 li ul li::before {
     display: inline-block;
-    content: "+";
+    content: "+";*/
     /*background-color: black;*/
-    width: 1em;
-    height: 0.1rem;
+    /*width: 0.5rem;
+    height: 0.1rem;*/
     /*vertical-align: super;*/
+/*}*/
+
+.reactjs::before {
+    display: inline-block;
+    content: url('react_icon.svg');
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    vertical-align: middle;
 }
