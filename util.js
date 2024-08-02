@@ -22,7 +22,7 @@ export function convertStringToArray(content) {
     const rows = content.split('\r\n');
     const quotecheck = new RegExp(/"/);
 
-    const noEmpty = rows.forEach(line=>{
+    rows.forEach(line => {
         let quote = "";
         if(quotecheck.test(line)) {
             const quoteSection = new RegExp(/"(.*?)"/);
@@ -32,9 +32,7 @@ export function convertStringToArray(content) {
         const arr = line.split(",");
         (quote !== "") && arr.push(quote[1]);
         stringArray.push(arr);
-    })
-
-    console.log(stringArray);
+    });
 
     return stringArray;
 }

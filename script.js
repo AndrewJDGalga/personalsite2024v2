@@ -8,11 +8,18 @@ const projectsCSVName = 'projects.csv';
 
 const contentString = await getCSVAsString(projectsCSVName);
 
-function portfolioObject(contentArray) {
-    console.log(contentArray);
+if(contentString !== ''){
+    const contentsArray = convertStringToArray(contentString);
+    const bodyArray = contentsArray.slice(1);
+    const contentFrag = document.createDocumentFragment();
 
-    const container = document.createElement('article');
+    for(let i = 0; i < bodyArray.length; i++) { 
+        contentFrag.append(buildPortfolio(bodyArray[i])); 
+    }
+    projectsHook.appendChild(contentFrag);
+}
 
+function buildPortfolio(contentArray) {
     const title = document.createElement('h2');
     title.textContent = contentArray[0];
 
@@ -22,22 +29,13 @@ function portfolioObject(contentArray) {
 
     const projectLink = document.createElement('a');
     projectLink.href = contentArray[3];
+    projectLink.textContent = contentArray[4];
 
     const projectDescription = document.createElement('p');
-    projectDescription.textContent = contentArray[4];
-
+    projectDescription.textContent = contentArray[5];
+    
+    const container = document.createElement('article');
     container.append(title, img, projectDescription, projectLink);
 
     return container;
-}
-
-if(contentString !== ''){
-    const contentsArray = convertStringToArray(contentString);
-    //const bodyArray = contentsArray.slice(1);
-    //const contentFrag = document.createDocumentFragment();
-
-    //contentsArray[0].forEach((header, index) => { contentFrag.append(portfolioObject(header, bodyArray[index])); });
-    //for(let i = 0; i < contentsArray[0].length; i++) { contentFrag.append(portfolioObject(bodyArray[i])); }
-
-    //projectsHook.appendChild(contentFrag);
 }
