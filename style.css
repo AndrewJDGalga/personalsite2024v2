@@ -4,9 +4,8 @@ body {
     background-color: slateblue;
     color:seashell;
     text-shadow: black 0.5px 0.5px 0.5px;
-
     margin: 0 auto;
-    max-width: 1800px;
+    max-width: 1500px;
 }
 
 header {
@@ -54,7 +53,8 @@ img {
 
 a {
     position: relative;
-    display: inline-block;
+    display: block;
+    width: max-content;
     color: seashell;
     text-decoration: none;
     border: seashell solid 1px;
@@ -116,7 +116,6 @@ ul.container {
     width: 50%;
 }
 .portfolioImage + p {
-    /*display: inline-block;*/
     width: 45%;
     float: right;
 }
@@ -127,6 +126,17 @@ ul.container {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .portfolioImage {
+        display: block;
+        width: 100%;
+    }
+    .portfolioImage + p {
+        width: 100%;
+        float: none;
     }
 }
 
