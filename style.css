@@ -33,6 +33,7 @@ h1 {
 h2 {
     font-size: 2rem;
     color: black;
+    text-align: center;
 }
 
 ul {
@@ -58,7 +59,7 @@ img {
 a {
     position: relative;
     display: block;
-    width: max-content;
+    width: min-content;
     color: seashell;
     text-decoration: none;
     border: seashell solid 1px;
@@ -66,6 +67,7 @@ a {
     margin: 16px 0;
     left: 50%;
     transform: translateX(-50%);
+    word-wrap: normal;
 }
 
 a:hover {
@@ -150,6 +152,9 @@ ul.container {
     }
     main {
         margin: 0 0.4rem;
+    }
+    h2 {
+        text-align: left;
     }
     li h3 {
         margin-top: 16px;
