@@ -63,23 +63,67 @@ ul.container {
     justify-content: space-evenly;
 }
 
+/*
 div img {
     display: inline;
     width: 64px;
     margin: 0 8px;
-    animation: fade 10s ease-in;
+    animation: fade 6s ease-in;
     opacity: 0;
     animation-fill-mode: forwards;
 }
+*/
 
+/*
 div img:nth-child(1) {
-    animation-delay: 1.2s;
+    animation-delay: 0.1s;
 }
 div img:nth-child(2) {
-    animation-delay: 2.4s;
+    animation-delay: 0.5s;
 }
 div img:nth-child(3) {
-    animation-delay: 3.6s;
+    animation-delay: 0.9s;
+}
+div img:nth-child(4) {
+    animation-delay: 1.3s;
+}
+*/
+
+
+.icon-anim {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.icon-anim div {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    aspect-ratio: 1/1;
+    width: 100%;
+    max-width: 512px;
+    min-width: 64px;
+    margin: 8px;
+    animation: fade 6s ease-in;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+.icon-anim .html {
+    background-image: url('html.png');
+    animation-delay: 0.1s;
+}
+.icon-anim .css {
+    background-image: url('css.png');
+    animation-delay: 0.5s;
+}
+.icon-anim .js {
+    background-image: url('js.png');
+    animation-delay: 0.9s;
+}
+.icon-anim .php {
+    background-image: url('php.png');
+    animation-delay: 1.3s;
 }
 
 @keyframes fade {
@@ -89,9 +133,4 @@ div img:nth-child(3) {
     100% {
         opacity: 1;
     }
-    /*
-    100% {
-        opacity: 0;
-    }
-        */
 }
