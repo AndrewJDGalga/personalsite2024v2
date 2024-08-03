@@ -3,7 +3,7 @@ import { getCSVAsString, convertStringToArray } from "./util.js";
 const projectsHook = document.getElementById('projects_hook');
 const projectsHookEndChild = document.querySelector('#projects_hook a');
 const projectsCSVName = 'projects.csv';
-
+const portfolioImgClass = 'portfolioImage';
 const contentString = await getCSVAsString(projectsCSVName);
 
 if(contentString !== ''){
@@ -25,6 +25,7 @@ function buildPortfolio(contentArray) {
     const img = document.createElement('img');
     img.src = `imgs/${contentArray[1]}`;
     img.alt = contentArray[2];
+    img.classList.add(portfolioImgClass);
 
     const projectLink = document.createElement('a');
     projectLink.href = contentArray[3];

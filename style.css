@@ -1,11 +1,12 @@
 
 body {
-    margin: 0 auto;
     font-size: large;
     background-color: slateblue;
     color:seashell;
     text-shadow: black 0.5px 0.5px 0.5px;
-    max-width: 1000px;
+
+    margin: 0 auto;
+    max-width: 1800px;
 }
 
 header {
@@ -18,7 +19,10 @@ header {
 main {
     clear: both;
     margin: 1rem;
-    
+}
+main section:first-child {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 h1 {
@@ -105,6 +109,16 @@ ul.container {
 .icon-anim .php {
     background-image: url('php.png');
     animation-delay: 1.0s;
+}
+
+.portfolioImage {
+    display: inline-block;
+    width: 50%;
+}
+.portfolioImage + p {
+    /*display: inline-block;*/
+    width: 45%;
+    float: right;
 }
 
 @keyframes fade {
