@@ -1,22 +1,21 @@
 import { getCSVAsString, convertStringToArray } from "./util.js";
 
 const projectsHook = document.getElementById('projects_hook');
+const projectsHookEndChild = document.querySelector('#projects_hook a');
 const projectsCSVName = 'projects.csv';
 
 const contentString = await getCSVAsString(projectsCSVName);
 
 if(contentString !== ''){
-    let contentsArray = convertStringToArray(contentString);
     //ensure empty spaces in CSV get stripped
-    contentsArray = contentsArray.filter(item=> item.length > 1);
-
+    const contentsArray = convertStringToArray(contentString).filter(item=> item.length > 1);
     const bodyArray = contentsArray.slice(1);
     const contentFrag = document.createDocumentFragment();
 
     for(let i = 0; i < bodyArray.length; i++) { 
         contentFrag.append(buildPortfolio(bodyArray[i])); 
     }
-    projectsHook.appendChild(contentFrag);
+    projectsHook.insertBefore(contentFrag, projectsHookEndChild);
 }
 
 function buildPortfolio(contentArray) {
