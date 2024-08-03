@@ -8,6 +8,7 @@
 
 body {
     margin: 0;
+    font-size: large;
     background-color: slateblue;
     color:seashell;
     text-shadow: black 0.5px 0.5px 0.5px;
@@ -53,8 +54,20 @@ img {
 }
 
 a {
-    color: white;
+    position: relative;
+    display: inline-block;
+    color: seashell;
     text-decoration: none;
+    border: seashell solid 1px;
+    padding: 4px;
+    margin: 16px 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+a:hover {
+    color: slateblue;
+    background-color: seashell;
 }
 
 ul.container {
