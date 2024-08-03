@@ -6,7 +6,10 @@ const projectsCSVName = 'projects.csv';
 const contentString = await getCSVAsString(projectsCSVName);
 
 if(contentString !== ''){
-    const contentsArray = convertStringToArray(contentString);
+    let contentsArray = convertStringToArray(contentString);
+    //ensure empty spaces in CSV get stripped
+    contentsArray = contentsArray.filter(item=> item.length > 1);
+
     const bodyArray = contentsArray.slice(1);
     const contentFrag = document.createDocumentFragment();
 
