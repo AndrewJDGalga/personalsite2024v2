@@ -7,7 +7,7 @@
 }
 
 body {
-    margin: 1rem;
+    margin: 0;
     background-color: slateblue;
     color:seashell;
     text-shadow: black 0.5px 0.5px 0.5px;
@@ -18,7 +18,11 @@ header {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    margin: 32px 0;
+    padding: 32px 0;
+}
+main {
+    clear: both;
+    margin: 1rem;
 }
 
 h1 {
@@ -26,10 +30,6 @@ h1 {
     width: 20rem;
     text-align: center;
     margin: 0;
-}
-
-main {
-    clear: both;
 }
 
 ul {
@@ -62,33 +62,6 @@ ul.container {
     flex-direction: row;
     justify-content: space-evenly;
 }
-
-/*
-div img {
-    display: inline;
-    width: 64px;
-    margin: 0 8px;
-    animation: fade 6s ease-in;
-    opacity: 0;
-    animation-fill-mode: forwards;
-}
-*/
-
-/*
-div img:nth-child(1) {
-    animation-delay: 0.1s;
-}
-div img:nth-child(2) {
-    animation-delay: 0.5s;
-}
-div img:nth-child(3) {
-    animation-delay: 0.9s;
-}
-div img:nth-child(4) {
-    animation-delay: 1.3s;
-}
-*/
-
 
 .icon-anim {
     width: 50%;
@@ -123,7 +96,7 @@ div img:nth-child(4) {
 }
 .icon-anim .php {
     background-image: url('php.png');
-    animation-delay: 1.3s;
+    animation-delay: 1.0s;
 }
 
 @keyframes fade {
